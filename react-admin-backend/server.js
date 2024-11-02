@@ -34,7 +34,7 @@ app.use(cors({
      // Update this with the frontend's URL
     credentials: true ,
     origin: 'http://localhost:3000',
-    methods:["POST","GET",]
+    methods:["POST","GET","PUT","DELETE"]
 }));
 // Define routes
 app.use('/api/auth', authRoutes);
