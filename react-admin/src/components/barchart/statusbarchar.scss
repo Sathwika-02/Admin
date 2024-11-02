@@ -1,0 +1,21 @@
+
+
+.chart{
+    display: flex;
+    width: 99%;
+    
+    .chart-container {
+        flex: 5;
+        .bar-chart{
+            width: 400px;  
+            height: 500px; 
+            margin: 0 auto;
+        }
+    }
+   
+}
+
+
+h2 {
+    text-align: center; /* Center the title */
+}

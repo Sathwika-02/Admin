@@ -1,0 +1,132 @@
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+.widget{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 10px;
+    -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+    border-radius: 10px;
+    height: 100px;
+    .left,.right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .title{
+            font-weight: bold;
+            font-size: 14px;
+            color: rgb(160,160,160);
+        }
+        .counter{
+            font-size: 28px;
+            font-weight: 300;
+        }
+        .routes{
+            cursor: pointer;
+            text-decoration: none;
+            border-bottom: none;
+        }
+        .link{
+            width: max-content;
+            font-size: 12px;
+            border-bottom: 1px solid gray;
+        }
+        .percentage{
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            &.positive{
+                color: green;
+            }
+            &.negative{
+                color: red;
+            }
+        }
+        .icon{
+            font-size: 18px;
+            padding: 5px;
+            border-radius: 5px;
+            align-self: flex-end;
+        }
+        
+    }
+
+
+}
+// .widgets {
+//     display: flex;
+//     gap: 1rem;
+//     width: 100%;
+//    max-width: 1200px;
+//     @media (max-width: $breakpoint-medium) {
+//       flex-direction: column;
+//       max-width: $breakpoint-medium;
+//       .left,.right{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         .title{
+//             font-weight: bold;
+//             font-size: 14px;
+//             color: rgb(160,160,160);
+//         }
+//         .counter{
+//             font-size: 28px;
+//             font-weight: 300;
+//         }
+//         .routes{
+//             cursor: pointer;
+//             text-decoration: none;
+//             border-bottom: none;
+//         }
+//         .link{
+//             width: max-content;
+//             font-size: 12px;
+//             border-bottom: 1px solid gray;
+//         }
+//         .percentage{
+//             display: flex;
+//             align-items: center;
+//             font-size: 14px;
+//             &.positive{
+//                 color: green;
+//             }
+//             &.negative{
+//                 color: red;
+//             }
+//         }
+//         .icon{
+//             font-size: 18px;
+//             padding: 5px;
+//             border-radius: 5px;
+//             align-self: flex-end;
+//         }
+        
+//     }
+
+//     }
+//   }
+.widgets {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allows widgets to wrap to the next line if they exceed the container width */
+    
+    width: 100%; /* Full width of the parent container */
+    max-width: 1200px; /* Optional: maximum width for larger screens */
+
+    @media (max-width: $breakpoint-large) {
+        max-width: 90%; /* Less width on larger screens */
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        flex-direction: column; /* Stack widgets vertically on medium screens */
+        max-width: 100%; /* Full width on medium screens */
+    }
+
+    @media (max-width: $breakpoint-small) {
+        max-width: 100%; /* Full width on small screens */
+        gap: 0.5rem; /* Optional: smaller gap on small screens */
+    }
+}

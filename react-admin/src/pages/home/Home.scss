@@ -1,0 +1,58 @@
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+.home{
+   display: flex;
+   .homeContainer{
+    // background-color: lightblue;
+    flex: 6;
+    width: 100vw;
+    .widgets,.charts{
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+        max-width: 100%; // Ensure they don’t exceed their container
+       
+    }
+    .charts{
+        padding: 5px 20px;
+          flex: 1 1 100%; // Allow charts to take full width on small screens
+        max-width: 100%; // Prevent overflow
+        box-sizing: border-box; // Include padding in width
+    }
+    .listContainer{
+        -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+        padding: 20px;
+        margin: 20px;
+        .listTitle{
+            font-weight: 500;
+            color: gray;
+            margin-bottom: 15px;
+        }
+    }
+   }
+}
+
+
+@media (max-width: $breakpoint-medium) {
+    .widgets {
+      flex-direction: column; // Stack widgets vertically
+    }
+
+    .charts {
+      
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: $breakpoint-small) {
+    .widgets {
+      gap: 10px; // Reduce gap for smaller screens
+    }
+    
+    .charts {
+      padding: 10px; // Adjust padding for charts on smaller screens
+    }
+  }
